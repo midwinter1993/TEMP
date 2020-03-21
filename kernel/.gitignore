@@ -1,0 +1,4 @@
+busybox-1.29.2/
+initramfs/
+obj/
+bzImage
