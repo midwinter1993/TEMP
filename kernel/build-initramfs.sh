@@ -32,6 +32,6 @@ compress_initramfs() {
         | gzip -9 > $TOP/obj/initramfs-busybox-x86.cpio.gz
 }
 
-prepare_initramfs
+# prepare_initramfs
 
 compress_initramfs
