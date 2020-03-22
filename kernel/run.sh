@@ -19,9 +19,9 @@ QEMU=qemu-system-x86_64
 # Run qemu with kernel+busybox
 #-------------------------------------------------
 # KERNEL=$TOP/obj/linux-5.5.11-x86-basic/arch/x86_64/boot/bzImage
-# BUSYBOX=$TOP/obj/initramfs-busybox-x86.cpio.gz
+BUSYBOX=$TOP/obj/initramfs-busybox-x86.cpio.gz
 KERNEL=$TOP/bzImage
-BUSYBOX=$TOP/initramfs-busybox-x86.cpio.gz
+# BUSYBOX=$TOP/initramfs-busybox-x86.cpio.gz
 
 case $machine in
     Linux) KVM_OPT="-enable-kvm -smp sockets=1,cores=5,threads=1 ";;

@@ -17,8 +17,6 @@ mount -t proc none /proc
 mount -t sysfs none /sys
 mknod -m 666 /dev/ttyS0 c 4 64
 
-echo -e "\nBoot took $(cut -d' ' -f1 /proc/uptime) seconds\n"
-
 setsid  cttyhack sh
 exec /bin/sh
 EOT
@@ -34,6 +32,6 @@ compress_initramfs() {
         | gzip -9 > $TOP/obj/initramfs-busybox-x86.cpio.gz
 }
 
-prepare_initramfs
+# prepare_initramfs
 
 compress_initramfs
